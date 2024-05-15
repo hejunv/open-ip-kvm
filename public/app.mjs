@@ -7,6 +7,7 @@ new Vue({
   data: {
     // serviceHost: '10.0.0.235',
     serviceHost: location.hostname,
+    realport:location.port,
     streamSrc: '',
     $channel: null,
     isKeyCaptureActive: false,
@@ -31,7 +32,7 @@ new Vue({
           );
         }
         this.$channel = await ws.init(
-          `ws://${this.serviceHost}:${config.listen_port}/websocket`
+          `ws://${this.serviceHost}:${this.realport}/websocket`
         );
         this.bindKeyHandler();
         this.bindMouseHandler();
