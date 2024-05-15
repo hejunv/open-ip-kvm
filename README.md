@@ -1,3 +1,6 @@
+把原作者写死的端口改成自动获取真实端口。这样做了ddns和端口转发的就能用你的ip端口访问了。配合caddy做代理鉴权。可以实现账号密码访问，保证了安全性
+
+
 # Open IP-KVM
 
 This project provides an open-source IP-KVM solution.
